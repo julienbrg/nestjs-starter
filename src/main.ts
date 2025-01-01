@@ -30,14 +30,14 @@ async function bootstrap() {
 
   // Swagger configuration
   const config = new DocumentBuilder()
-    .setTitle('API Documentation')
-    .setDescription('API documentation for the application')
+    .setTitle('NestJS Starter')
+    .setDescription('API docs for NestJS Starter')
     .setVersion('1.0')
     .addBearerAuth()
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('api/docs', app, document);
+  SwaggerModule.setup('api', app, document);
 
   // Start the server
   const port = process.env.PORT || 3000;

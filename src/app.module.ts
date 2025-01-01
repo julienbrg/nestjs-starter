@@ -11,7 +11,7 @@ import { AppService } from './app.service';
     }),
     ThrottlerModule.forRoot([
       {
-        ttl: 60000, // time in milliseconds
+        ttl: 60000,
         limit: 100,
       },
     ]),
